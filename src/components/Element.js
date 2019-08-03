@@ -13,7 +13,7 @@ const Container = styled.div`
 
 const Box = styled.div`
   min-width: 200px;
-  border: 1px darkgrey solid;
+  border: 1px rgb(222, 222, 222) solid;
   padding: 12px;
   border-radius: 3px;
   background-color: white;

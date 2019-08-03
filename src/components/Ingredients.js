@@ -27,9 +27,9 @@ const LineContainer = styled.div`
 const Line = styled.div`
   min-width: 42px;
   width: 100%;
-  height: 3px;
+  height: 1px;
 
-  background-color: darkgrey;
+  background-color: #666;
 `;
 
 export default class Element extends React.Component {

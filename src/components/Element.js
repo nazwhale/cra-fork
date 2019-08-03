@@ -21,6 +21,7 @@ const ArrowOutputContainer = styled.div`
   min-width: 180px;
   display: flex;
   align-items: center;
+  margin-right: 12px;
 `;
 
 const Arrow = styled.div`

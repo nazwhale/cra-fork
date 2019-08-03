@@ -11,24 +11,58 @@ class App extends Component {
   render() {
     return (
       <Container>
-        <h1>Recipes</h1>
         <h3>Aubergine Fasenjan</h3>
         <Element
-          ingredients={["oil", "aubergines"]}
-          process="roast"
-          time="1 hour"
-          output="roast aubergines"
-        />
-        <Element
-          ingredients={["oil", "red onion"]}
-          process="fry"
-          time="12 minutes"
-          output="fried onions"
-        />
-        <Element
-          ingredients={["walnuts"]}
-          process="blitz"
-          output="walnut crumbs"
+          ingredients={[
+            <Element
+              ingredients={[
+                <Element
+                  ingredients={["oil", "aubergines"]}
+                  process="roast"
+                  time="1 hour"
+                  output="roast aubergines"
+                />,
+                <Element
+                  ingredients={[
+                    <Element
+                      ingredients={["walnuts"]}
+                      process="blitz"
+                      output="walnut crumbs"
+                    />,
+                    "veg stock",
+                    "pomegranete molasses",
+                    <Element
+                      ingredients={[
+                        <Element
+                          ingredients={["oil", "red onion"]}
+                          process="fry"
+                          time="12 minutes"
+                          output="fried onions"
+                        />,
+                        "garlic"
+                      ]}
+                      process="fry"
+                      time="2 minutes"
+                      output="fried garlic + onion"
+                    />,
+                    "cinnamon",
+                    "chili powder",
+                    "salt + pepper"
+                  ]}
+                  process="cook"
+                  time="8 minutes"
+                  output="fesenjan sauce"
+                />,
+                "coriander",
+                "pomegranete seeds"
+              ]}
+              process="combine"
+              output="aubergine fesenjan"
+            />,
+            "rice"
+          ]}
+          process="combine"
+          output="aubergine fesenjan + rice"
         />
       </Container>
     );

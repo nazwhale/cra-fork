@@ -4,22 +4,32 @@ import * as React from "react";
 import styled from "styled-components";
 
 const Container = styled.div`
-  display: block;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 `;
 
 const Ingredient = styled.div`
   display: flex;
+  justify-content: space-between;
+`;
+
+const IngredientName = styled.p`
+  min-width: 100px;
+`;
+
+const ArrowContainer = styled.div`
+  display: flex;
+  align-items: center;
 `;
 
 const Arrow = styled.div`
-  width: 0;
-  height: 0;
+  height: 8px;
+  min-width: 42px;
+  width: 100%;
+  border-radius: 12px 0 0 12px;
 
-  border-top: 15px solid transparent;
-  border-bottom: 15px solid transparent;
-  border-left: 40px solid green;
-
-  margin: 0 12px;
+  background-color: green;
 `;
 
 export default class Element extends React.Component {
@@ -29,8 +39,10 @@ export default class Element extends React.Component {
       <Container>
         {items.map(i => (
           <Ingredient>
-            <p>{i}</p>
-            <Arrow />
+            <IngredientName>{i}</IngredientName>
+            <ArrowContainer>
+              <Arrow />
+            </ArrowContainer>
           </Ingredient>
         ))}
       </Container>

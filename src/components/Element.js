@@ -11,11 +11,16 @@ const Container = styled.div`
 `;
 
 const Box = styled.div`
-  height: 100px;
-  width: 100px;
+  min-width: 200px;
   border: 3px black solid;
-  margin: 0 12px;
   padding: 12px;
+  border-radius: 12px;
+`;
+
+const ArrowOutputContainer = styled.div`
+  min-width: 180px;
+  display: flex;
+  align-items: center;
 `;
 
 const Arrow = styled.div`
@@ -26,7 +31,7 @@ const Arrow = styled.div`
   border-bottom: 15px solid transparent;
   border-left: 40px solid green;
 
-  margin: 0 12px;
+  margin: 0 12px 0 0;
 `;
 
 export default class Element extends React.Component {
@@ -39,8 +44,10 @@ export default class Element extends React.Component {
           <p>{process}</p>
           <p>{time}</p>
         </Box>
-        <Arrow />
-        {output}
+        <ArrowOutputContainer>
+          <Arrow />
+          {output}
+        </ArrowOutputContainer>
       </Container>
     );
   }

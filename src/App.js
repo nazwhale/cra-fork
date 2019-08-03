@@ -11,7 +11,7 @@ class App extends Component {
   render() {
     return (
       <RecipeContainer>
-        <h3>Aubergine Fasenjan</h3>
+        <h3>🍆 Aubergine Fasenjan</h3>
         <Element
           ingredients={[
             <Element

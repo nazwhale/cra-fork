@@ -15,10 +15,11 @@ const Ingredient = styled.div`
 `;
 
 const IngredientName = styled.p`
-  min-width: 100px;
+  margin-right: 24px;
 `;
 
 const ArrowContainer = styled.div`
+  width: 100%;
   display: flex;
   align-items: center;
 `;

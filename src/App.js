@@ -3,14 +3,14 @@ import styled from "styled-components";
 
 import Element from "./components/Element";
 
-const Container = styled.div`
+const RecipeContainer = styled.div`
   margin: 12px;
 `;
 
 class App extends Component {
   render() {
     return (
-      <Container>
+      <RecipeContainer>
         <h3>Aubergine Fasenjan</h3>
         <Element
           ingredients={[
@@ -25,13 +25,6 @@ class App extends Component {
                 <Element
                   ingredients={[
                     <Element
-                      ingredients={["walnuts"]}
-                      process="blitz"
-                      output="walnut crumbs"
-                    />,
-                    "veg stock",
-                    "pomegranete molasses",
-                    <Element
                       ingredients={[
                         <Element
                           ingredients={["oil", "red onion"]}
@@ -45,6 +38,17 @@ class App extends Component {
                       time="2 minutes"
                       output="fried garlic + onion"
                     />,
+                    <Element
+                      ingredients={["walnuts"]}
+                      process="blitz"
+                      output="walnut crumbs"
+                    />,
+                    <Element
+                      ingredients={["stock cube", "water"]}
+                      process="combine"
+                      output="veg stock"
+                    />,
+                    "pomegranete molasses",
                     "cinnamon",
                     "chili powder",
                     "salt + pepper"
@@ -53,8 +57,12 @@ class App extends Component {
                   time="8 minutes"
                   output="fesenjan sauce"
                 />,
-                "coriander",
-                "pomegranete seeds"
+                <Element
+                  ingredients={["pomegranete"]}
+                  process="deseed"
+                  output="pomegranete seeds"
+                />,
+                "coriander"
               ]}
               process="combine"
               output="aubergine fesenjan"
@@ -64,7 +72,7 @@ class App extends Component {
           process="combine"
           output="aubergine fesenjan + rice"
         />
-      </Container>
+      </RecipeContainer>
     );
   }
 }

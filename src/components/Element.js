@@ -15,6 +15,7 @@ const Box = styled.div`
   border: 3px black solid;
   padding: 12px;
   border-radius: 12px;
+  background-color: white;
 `;
 
 const ArrowOutputContainer = styled.div`

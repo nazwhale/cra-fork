@@ -4,6 +4,7 @@ import * as React from "react";
 import styled from "styled-components";
 
 import Ingredients from "./Ingredients";
+import chevron from "../assets/chevron.svg";
 
 const Container = styled.div`
   display: flex;
@@ -12,9 +13,9 @@ const Container = styled.div`
 
 const Box = styled.div`
   min-width: 200px;
-  border: 3px black solid;
+  border: 1px darkgrey solid;
   padding: 12px;
-  border-radius: 12px;
+  border-radius: 3px;
   background-color: white;
 `;
 
@@ -25,15 +26,9 @@ const ArrowOutputContainer = styled.div`
   margin-right: 12px;
 `;
 
-const Arrow = styled.div`
-  width: 0;
-  height: 0;
-
-  border-top: 15px solid transparent;
-  border-bottom: 15px solid transparent;
-  border-left: 40px solid green;
-
-  margin: 0 12px 0 0;
+const Chevron = styled.img`
+  margin: 0 18px 0 18px;
+  height: 28px;
 `;
 
 export default class Element extends React.Component {
@@ -47,7 +42,7 @@ export default class Element extends React.Component {
           <p>{time}</p>
         </Box>
         <ArrowOutputContainer>
-          <Arrow />
+          <Chevron src={chevron} alt="chevron" />
           {output}
         </ArrowOutputContainer>
       </Container>

@@ -18,19 +18,18 @@ const IngredientName = styled.p`
   margin-right: 24px;
 `;
 
-const ArrowContainer = styled.div`
+const LineContainer = styled.div`
   width: 100%;
   display: flex;
   align-items: center;
 `;
 
-const Arrow = styled.div`
-  height: 8px;
+const Line = styled.div`
   min-width: 42px;
   width: 100%;
-  border-radius: 12px 0 0 12px;
+  height: 3px;
 
-  background-color: green;
+  background-color: darkgrey;
 `;
 
 export default class Element extends React.Component {
@@ -41,9 +40,9 @@ export default class Element extends React.Component {
         {items.map(i => (
           <Ingredient>
             <IngredientName>{i}</IngredientName>
-            <ArrowContainer>
-              <Arrow />
-            </ArrowContainer>
+            <LineContainer>
+              <Line />
+            </LineContainer>
           </Ingredient>
         ))}
       </Container>
